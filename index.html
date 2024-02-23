@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dự Án Của Tôi</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Dự Án Của Tôi</h1>
+    </header>
+
+    <main>
+      <section class="project">
+        <h2>Dự Án Trang Web Đọc Sách Online Tự Thiết Kế</h2>
+        <p>Mô tả về dự án:</p>
+        <a href="https://waka-ebon.vercel.app/">Xem chi tiết</a>
+      </section>
+
+      <section class="project">
+        <h2>Dự Án Shoppe Phake</h2>
+        <p>Mô tả về dự án: Website thuơng mại điện tử Shoppe</p>
+        <a href="https://shoppee-js-sdf.vercel.app/">Xem chi tiết</a>
+      </section>
+
+      <section class="project">
+        <h2>Web cho thuê website</h2>
+        <p>Mô tả về dự án 3...</p>
+        <a href="https://trang-web-dep.vercel.app/">Xem chi tiết</a>
+      </section>
+    </main>
+
+    <!-- Social Media -->
+    <div class="wrapper">
+      <div class="icon facebook">
+        <div class="tooltip">Facebook</div>
+        <img src="./img/facebook.png" alt="">
+      </div>
+      <div class="icon twitter">
+        <div class="tooltip">Twitter</div>
+        <img src="./img/twitter.png" alt="">
+      </div>
+      <div class="icon instagram">
+        <div class="tooltip">Instagram</div>
+        <img src="./img/instagram.png" alt="">
+      </div>
+      <div class="icon github">
+        <div class="tooltip">Github</div>
+        <img src="./img/github.png" alt="">
+      </div>
+      <div class="icon youtube">
+        <div class="tooltip">YouTube</div>
+        <img src="./img/youtube.png" alt="">
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Dự Án Của Thiện</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const projects = document.querySelectorAll(".project");
+
+        projects.forEach((project) => {
+          project.addEventListener("mouseenter", function () {
+            this.style.backgroundColor = "#ddd";
+          });
+
+          project.addEventListener("mouseleave", function () {
+            this.style.backgroundColor = "#f4f4f4";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
