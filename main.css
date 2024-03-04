@@ -1,81 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dự Án Của Tôi</title>
-  <link rel="stylesheet" href="./main.css">
-</head>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-<body>
-  <header>
-    <h1>Dự Án Của Tôi</h1>
-  </header>
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-  <main>
-    <section class="project">
-      <h2>Web Đọc Sách Online</h2>
-      <p>Mô tả về dự án:</p>
-      <a href="https://waka-ebon.vercel.app/">
-        <img src="https://i.snipboard.io/hjP6Xz.jpg" /></a>
-    </section>
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
 
-    <section class="project">
-      <h2>Dự Án Shoppe Phake</h2>
-      <p>Mô tả về dự án:</p>
-      <a href="https://shoppee-js-sdf.vercel.app/">
-        <img src="https://i.snipboard.io/Q2LkZ0.jpg" /></a>
-    </section>
+.project {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
 
-    <section class="project">
-      <h2>Web cho thuê website</h2>
-      <p>Mô tả về dự án 3...</p>
-      <a href="https://trang-web-dep.vercel.app/">
-        <img src="https://i.snipboard.io/C0q3h8.jpg" /></a>
-    </section>
-  </main>
+.project img{
+  width: 100%;
+}
 
-  <!-- Social Media -->
-  <div class="wrapper">
-    <div class="icon facebook">
-      <div class="tooltip">Facebook</div>
-      <img src="./img/facebook.png" alt="">
-    </div>
-    <div class="icon twitter">
-      <div class="tooltip">Twitter</div>
-      <img src="./img/twitter.png" alt="">
-    </div>
-    <div class="icon instagram">
-      <div class="tooltip">Instagram</div>
-      <img src="./img/instagram.png" alt="">
-    </div>
-    <div class="icon github">
-      <div class="tooltip">Github</div>
-      <img src="./img/github.png" alt="">
-    </div>
-    <div class="icon youtube">
-      <div class="tooltip">YouTube</div>
-      <img src="./img/youtube.png" alt="">
-    </div>
-  </div>
-  <footer>
-    <p>&copy; 2024 Dự Án Của Thiện</p>
-  </footer>
+.project:hover {
+  transform: translateY(-5px);
+  background-color: #ddd;
+}
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const projects = document.querySelectorAll(".project");
-      projects.forEach((project) => {
-        project.addEventListener("mouseenter", function() {
-          this.style.backgroundColor = "#ddd";
-        });
-        project.addEventListener("mouseleave", function() {
-          this.style.backgroundColor = "#f4f4f4";
-        });
-      });
-    });
-  </script>
-</body>
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
 
-</html>
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #8f3636, #d7e1ec);
+}
+
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -ms-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #ffffff;
+  padding: 5px 8px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -ms-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: translate(-50%) rotate(45deg);
+  -moz-transform: translate(-50%) rotate(45deg);
+  -ms-transform: translate(-50%) rotate(45deg);
+  -o-transform: translate(-50%) rotate(45deg);
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -ms-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.01);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #3b5999;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #46c1f6;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e1306c;
+  color: #fff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #fff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #e92828;
+  color: #fff;
+}
+
+.icon > img{
+    width: 52px;
+}
