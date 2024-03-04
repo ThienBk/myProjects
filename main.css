@@ -29,8 +29,12 @@ main {
   transition: transform 0.3s ease;
 }
 
+.project p{
+  margin-top: 10px;
+}
 .project img{
   width: 100%;
+  padding-top: 30px;
 }
 
 .project:hover {
